@@ -67,4 +67,5 @@ Seered::Application.configure do
 
   #Domain name for Devise
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.assets.initialize_on_precompile = false
 end
