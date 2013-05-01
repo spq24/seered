@@ -7,6 +7,8 @@ break if ARGV.join.include? 'assets:precompile'
   devise_for :users
 
   root :to => 'pages#home'
+
+  get "pages/home"
   
   match '/about',     to: 'pages#about'
 
