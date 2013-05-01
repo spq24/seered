@@ -1,4 +1,7 @@
 Seered::Application.routes.draw do
+
+ root :to => 'pages#home'
+  
 break if ARGV.join.include? 'assets:precompile'
   ActiveAdmin.routes(self)
 
@@ -6,7 +9,7 @@ break if ARGV.join.include? 'assets:precompile'
 
   devise_for :users
 
-  root :to => 'pages#home'
+ 
 
   get "pages/home"
   
