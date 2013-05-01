@@ -1,0 +1,47 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+ 
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+ 
+      <!-- Be sure to leave the brand out there if you want it shown -->
+      <div class="brand">
+        <p>#Dummy</p>
+      </div>
+
+      <!-- Everything you want hidden at 940px or less, place within here -->
+      <div class="nav-collapse collapse">
+         <ul class="nav">
+             <li><%= link_to "Home", root_path %></li>
+             <li><%= link_to "About", about_path %></li>
+             <li></li>
+         </ul>
+         
+          <ul class="nav pull-right">
+        
+              <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">USER NAME
+                  <span class="caret"></span>
+              </button>
+                <ul class="dropdown-menu">
+                  <!-- dropdown menu links -->
+                  <!-- <li><%= link_to("My #Fails", '#') %></li>-->
+                  <!-- <li><%= link_to "Edit Profile", '#' %></li>-->
+                  <!-- <li><%= link_to "Logout", '#' %></li>-->
+                  <li>dummy list item</li>
+                </ul>
+
+          <!---  <ul class="nav">-->
+             <!--- <li><a href="#"><button class="btn btn-info btn-primary">Login</button></a></li>-->
+          <!---  </ul>-->
+
+         </ul>
+      </div>
+ 
+    </div>
+  </div>
+</div>
