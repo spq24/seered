@@ -4,6 +4,8 @@ gem 'rails', '3.2.6'
 gem 'bootstrap-sass', '~> 2.3.1.0'
 gem 'devise'
 gem 'simple_form'
+gem 'activeadmin'
+gem 'meta_search',  '>= 1.1.0.pre'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
