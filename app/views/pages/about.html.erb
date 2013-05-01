@@ -1,2 +1,17 @@
-<h1>Pages#about</h1>
-<p>Find me in app/views/pages/about.html.erb</p>
+<% if user_signed_in? %>
+
+<center>
+<br /><br />
+
+<h1>SEO In A Nutshell</h1>
+
+	<img src="http://25.media.tumblr.com/76dfafd54daada66a2a665b1ad066480/tumblr_mjkz3eS9Im1qjhrybo1_500.jpg" /><br /><br />
+	<img src="http://25.media.tumblr.com/a74fc7c34a84b6a6037b9699d860bcce/tumblr_mht03uv9tK1qjhrybo1_400.jpg" />
+</center>
+
+<% else %>
+
+<h1>This is the About Us Page</h1>
+<p>Why do you want to know more about me? You should be worried about finding out about yourself</p>
+
+<% end %>

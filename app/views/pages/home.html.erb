@@ -1,2 +1,42 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+	<% if user_signed_in? %>
+	<div class="center hero-unit">
+		<center>
+		    <h1>Your Signed in</h1><br />
+		    <p>Now that you are signed in you can read the content that's only for double secret agents who can handle this classified information, edit your profile, or change your password</p>
+		     </p>
+		
+	</div>
+	<center><%= link_to "Read about Citation Gathering on SEER's blog", "http://www.seerinteractive.com/blog/catching-up-with-your-local-competitors-automating-citation-discovery", :target => "_blank" %><br /></center>
+
+	<h2>Facebook Graph Search</h2>
+
+	<p>The new facebook graph search is slowly rolling out and might be Facebook’s way back into our hearts. I’ve been using it for a week or two and definitely think it’s a fun tool which holds a lot of promising features especially in local. For a thorough walk through on Graph Search check out this post by Ross Hudgens. If you haven’t requested access to Facebook Graph Search do so (after reading and sharing this) now: http://www.facebook.com/about/graphsearch</p>
+
+	<h2>Creating Relationships</h2>
+	<p>If you work in SEO you know there has been a huge push in developing real relationships to get links, creating authoritative voices, and doing real company stuff that will get you mentioned on top news outlets. Besides using HARO or a PR company it can be a little hard to do since these journalists and bloggers get bombarded by stories. So what do you do?</p>
+
+	<p>Why not ask your friends to introduce you to a journalist they know?</p>
+
+	<p>Using Facebooks Graph Search you can search Friends of Friends and the companies they work at. I wanted to know if any of my friends know people at The Huffington Post. I searched for Friends of my friends that work at The Huffington Post and got about 20+ people who work at HuffPo and have a mutual friend with me.</p>
+
+	<p>Note: I blacked out all the identifying information because this is my black book and not yours :), but I’m sure you get the point!</p>
+
+	<center>
+		<img src="http://www.seerinteractive.com/wp-content/uploads/2013/01/2013-01-30_1401.png" />
+	</center>
+
+	</center>
+
+	<% else %>
+	<div class="center hero-unit">
+		<center>
+		    <h1>Welcome! </h1>
+		    <p>To the Dummiest of Dumb sites. Check it out dudes and dudets</p>
+		     </p>
+
+		    <p> <%= link_to 'Sign up now!',  new_user_registration_path , class: "btn btn-large btn-primary" %> </p>
+		</center>
+	</div>
+
+	<% end %>

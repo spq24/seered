@@ -10,9 +10,7 @@
       </a>
  
       <!-- Be sure to leave the brand out there if you want it shown -->
-      <div class="brand">
-        <p>#Dummy</p>
-      </div>
+      <%= link_to "#Dummy", root_path, :class => 'brand' %>
 
       <!-- Everything you want hidden at 940px or less, place within here -->
       <div class="nav-collapse collapse">
@@ -23,22 +21,21 @@
          </ul>
          
           <ul class="nav pull-right">
-        
-              <button class="btn btn-info dropdown-toggle" data-toggle="dropdown">USER NAME
+            <% if user_signed_in? %> 
+              <button class="btn btn-info dropdown-toggle" data-toggle="dropdown"><%= current_user.name %>
                   <span class="caret"></span>
               </button>
                 <ul class="dropdown-menu">
                   <!-- dropdown menu links -->
-                  <!-- <li><%= link_to("My #Fails", '#') %></li>-->
-                  <!-- <li><%= link_to "Edit Profile", '#' %></li>-->
-                  <!-- <li><%= link_to "Logout", '#' %></li>-->
-                  <li>dummy list item</li>
+                  <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+                  <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
                 </ul>
+            <% else %>
+          <ul class="nav">
+            <li><%= button_to "Login", new_user_session_path, :class => "btn btn-info btn-primary" %></li>
 
-          <!---  <ul class="nav">-->
-             <!--- <li><a href="#"><button class="btn btn-info btn-primary">Login</button></a></li>-->
-          <!---  </ul>-->
-
+          </ul>
+          <% end %>
          </ul>
       </div>
  
